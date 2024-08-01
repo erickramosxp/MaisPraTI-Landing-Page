@@ -1,0 +1,23 @@
+h1 {
+    padding-top: 10px;
+}
+.conteudo_primario_texto > img {
+    max-width: 600px
+}
+
+
+.conteudo_principal .navegacao {
+    background: linear-gradient(#010307d3, black 90%);
+}
+
+.titulo_sessao li {
+    width: 100%;
+    background-color:  rgb(10, 24, 31);;
+    padding: 8px;
+    font-size: 40px;
+    color: #d6dbc1;
+}
+.conteudo_principal {
+    display: grid;
+    height: 100%;
+}

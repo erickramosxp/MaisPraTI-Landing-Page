@@ -1,3 +1,9 @@
+@import "contato.css";
+@import "home.css";
+@import "localizacao.css";
+@import "produtos.css";
+@import "sobre.css";
+
 * {
     margin: 0;
     padding: 0;
@@ -17,6 +23,16 @@
     --verde-musgo: #4CAF50;
 }
 
+main {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+main.fade-out {
+    opacity: 0;
+}
+
+
 body {
     height: 100vh;
     font-family: "Playpen Sans", cursive;
@@ -24,12 +40,19 @@ body {
     background-color: var(--verde-creme);
 }
 
+nav {
+    display: flex;
+    background-color: var(--azul-escuro);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
 .navegacao {
     text-align: center;
     align-items: center;
     list-style: none;
     line-height: 40px;
-    background-color: var(--azul-escuro);
 }
 
 .navegacao li {
@@ -44,7 +67,6 @@ body {
     display: block;
     height: 40px;
     padding: 0 10px;
-    border-radius: 10px;
     text-decoration: none;
 }
 
@@ -80,192 +102,27 @@ body {
     transform: translateY(-5px);
 }
 
-h1 {
-    padding-top: 10px;
-}
-.conteudo_primario_texto > img {
-    max-width: 600px
+.carrinho {
+    margin-left: 3rem;
 }
 
-
-.conteudo_principal .navegacao {
-    background: linear-gradient(#010307d3, black 90%);
-}
-
-.titulo_sessao li {
-    width: 100%;
-    background-color: black;
-    padding: 8px;
-    border-radius: 10px;
-    font-size: 40px;
-    color: #e9f0c9;
-}
-.conteudo_principal {
-    display: grid;
-    height: 800px;
-}
-
-.produtos {
-    display: table;
-    text-align: center;
-    height: 600px;
-}
-
-.produto {
-    background-color: var(--azul-escuro);
-    display: inline-block;
-    border-radius: 20px;
-    border: solid 1px var(--azul-escuro);
-    height: 39rem;
-    width: 22%;
-}
-
-.produto p {
-    color: var(--bege-claro);
-}
-
-.produto + .produto{
-    margin-left: 30px;
-}
-
-.img_produto {
-    background-color: var(--azul-esverdeado);
-    border-radius: 10px;
-}
-
-.produto img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-}
-
-.produto .img_produto {
-    display: block;
-    margin: auto;
-    margin-top: 30px;
-    width: 80%;
-    height: 300px;
-}
-
-.produto p {
-    height: 190px;
-    margin: auto;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    font-size: 1em;
-    width: 80%;
-}
-
-.butao {
-    height: 40px;
-    width: 100px;
-    margin-top: 20px;
-    background-color: black;
-    color: #fff;
-    border-style: none;
-    border-radius: 10px;
-}
-
-.butao:hover {
+.carrinho img {
+    width: 26px;
     cursor: pointer;
-    background-color: var(--azul-claro);
-}
-
-
-.conteudo_sobre {
-    /* display: grid; */
-    margin: auto;
-    text-align: center;
-    /* height: 700px; */
-}
-
-.conteudos {
-    position: relative;
-    height: 600px;
-}
-
-.conteudo_sobre .mapa{
-    margin-right: 50px;
-    display: inline-block;
-    width: 600px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-100%,-50%);
-}
-
-.conteudo_sobre_texto {
-    overflow-y: auto;
-    display: inline-block;
-    text-align: center;
-    background-color: var(--azul-escuro);
-    border-radius: 15px;
-    width: 600px;
-    height: 450px;
-    margin-left: 50px;
-    margin-top: 15px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(0%, -50%);
-}
-
-.conteudo_sobre_texto h2 {  
-    color: var(--bege-claro);
-    margin-top: 20px;
-    font-size: 25px;
-}
-
-.conteudo_sobre_texto p {
-    color: var(--bege-claro);
-    margin-top: 10px;
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.conteudo_contato {
-    height: 650px;
-}
-
-.formulario {
-    text-align: center;
-    margin: auto;
-    margin-top: 70px;
-    width: 800px;
-    background-color: var(--azul-escuro);
-    border-radius: 20px;
-}
-
-
-.formulario fieldset {
-    border: none;
-    height: 500px;
-}
-
-.formulario legend {
-    font-size: 50px;
-    color: var(--bege-claro);
-    padding-bottom: 30px;
-}
-
-.formulario label {
-    color: var(--bege-claro);
-    display: block;
-}
-
-.formulario fieldset div+div {
-    margin-top: 10px;
 }
 
 footer {
-    text-align: center;
-    margin-top: 20px;
-    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    border-top: 1px solid #9A9A9A;
 }
 
 footer p {
+    display: inline-block;
     font-size: 20px;
-    margin-top: 20px;
+    height: 20px;
 }
 
 #pop-up {
